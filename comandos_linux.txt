@@ -1,0 +1,24 @@
+Comandos basicos_
+pwd = saber donde estamos ubicados
+cd ruta = desplazar la ubicación del arbol
+ls = listar archivos en carpeta
+clear = borrar pantalla
+mkdir = crear directorios(carpetas)
+touch = crear archivos en blanco
+nano = edita y crea archivos
+cat = ver el contenido sin editarlo
+cp = copiar un archivo a otro [cp ejemplo1.txt copia.txt]
+rm = borrar un archivo
+rm -rf = borra directorios
+
+Comandos avanzados
+df = permite visualizar el uso de la micro SD en bloques
+df -h = permite visualizar el uso de la microSD en %
+free = aparece cuanto tiene libre en la RAM
+free -h = aparece cuantos GB se tiene libre en la RAM
+cat /proc/meminfo = informacion de la memoria
+cat /proc/cpuinfo = ver informacion de cpu
+ifconfig = ver informacion de red
+route -n= ver informacion del router o gateway
+ping IPGateway = para ver conectividad, tenemos que agregar el IP del gateway
+
