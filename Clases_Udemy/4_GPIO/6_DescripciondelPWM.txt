@@ -1,0 +1,11 @@
+import RPi.GPIO as GPIO
+
+pwm = GPIO.PWM(#pin,f)
+#f es frecuencia en Hz
+#T=1/f  ==> f = 1/T
+
+pwm.start(dc) # 0 <= dc <= 100
+pwm.ChangeDutyCycle(nuevo_dc)
+pwm.stop()
+
+# T = 2ms ==> f = 500Hz

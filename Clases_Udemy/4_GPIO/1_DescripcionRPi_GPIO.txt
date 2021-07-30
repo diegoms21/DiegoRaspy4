@@ -1,0 +1,22 @@
+Libreria: RPi.GPIO
+import RPi.GPIO as GPIO
+
+#definir el modo de trabajo
+GPIO.setmode(modo)
+#modo: GPIO.BOARD, GPIO.BCM
+
+#definir un GPIO como entrada o salida
+GPIO.setup(#pin,GPIO.OUT)  #salida
+GPIO.setup(#pin,GPIO.IN)  #entrada
+#pin sera acorde al modo de trabajo
+
+#asumimos que el pin esta configurado como salida
+GPIO.output(#pin,GPIO.HIGH)  #GPIO.output(#pin,1)
+GPIO.output(#pin,GPIO.LOW)  #GPIO.output(#pin,0)
+
+#asumimos que el pin esta configurado como entrada
+GPIO.input(#pin)  #lee el valor que ingresa
+# a = GPIO.input(3)  #a es GPIO.HIGH o GPIO.LOW
+
+#limpiar de canales
+GPIO.cleanup()
