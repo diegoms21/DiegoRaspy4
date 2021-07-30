@@ -1,0 +1,18 @@
+Servo SG90
+rojo ==> 5V
+marron ==> GND
+naranja ==> Señal
+
+gira de 0 a 180
+T = 20ms ==> f=1000/20 = 50 
+Ton = 0.5ms ==> 0 grados ==> dc = 2.5
+Ton = 1.5ms ==> 90 grados ==> dc = 7.5
+Ton = 2.5ms ==> 180 grados  ==> dc = 12.5
+
+y = a*x+b
+0 = a*2.5+b 
+180 = a*12.5 +b
+180 = a*10 ==> a =18
+0 = 18*2.5 +b ==> 0 = 45+b ==> b= -45
+angulo = 18*dc - 45
+dc = (angulo + 45)/18
