@@ -1,0 +1,30 @@
+Libreria: import socket
+
+Objeto:
+s = socket.socket()    →Si no le colocamos nada, usa los parametros por defecto de abajo
+s = socket.socket(a,b) →Le colocamos a y b para cambiarle de parametros al objeto
+  a ==> socket.AF_INET (defecto)     →Crea en IPv4 por defecto
+  a ==> socket.AF_INET6              →Crea en IPv6
+  b ==> socket.SOCK_STREAM (defecto) → Usa el protocolo TCP por defecto
+  b ==> socket.SOCK_DGRAM            → Usa el protocolo UDP
+
+Servidor: →Abrimos un puerto con el bin
+s.bind(tupla) #tupla → (ip, puerto)
+s.bind(("192.168.1.2",2020))
+s.listen(#numero de conexiones soporta en simultaneo)
+con s.accept esperamos a que un cliente se conecte
+s.accept()  ==> Cuando un cliente se conecta, devuelve una tupla con (socket, direcion)
+(sC,addrC) = s.accept() →(SocketCliente, direccionCliente) eso devuelve el comando anterior
+
+Cliente: →nos conectamos al servidor con s.connect
+s.connect(tupla) #tupla ipS, puertoS
+s.connect(("192.168.1.6",2021))
+
+Funciones para cliente y servidor
+para TCP
+s.recv(#bytes en el buffer) → recibir datos, le asignamos cuantos bytes necesitaremos pare recibir un mensaje
+s.send(bytes) → envía bytes, todo lo que enviemos se convierte a bytes
+
+para UDP
+s.recvfrom(#bytes en el buffer) →igual que arriba
+s.sendto(bytes, direccion) →enviamos los bytes y la direccion a enviar
